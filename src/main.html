@@ -1,0 +1,46 @@
+<div class="centrar">
+  <h1>¡Hola desde {{variable_Angular}}!</h1>
+  <h3>{{variable_Email}}</h3>
+
+  <!-- Primitiva NgFor: -->
+  <ul>
+    <li *ngFor="let variable_Productos of coleccion_Productos">
+      {{variable_Productos.nombre_Producto_02}} $
+      {{variable_Productos.precio_Producto_02}}
+    </li>
+  </ul>
+
+  <!-- Primitiva NgIf: -->
+  <img
+    *ngIf="variable_Edad > 18"
+    [src]="variable_Img"
+    [alt]="variable_Alt_Img"
+  />
+  <!-- Logo Google: Título ó texto alternativo -->
+  <!-- [] = Alude a la propiedad 'GET'.  -->
+
+  <!-- <button (click)="metodoSaludar()">saludar ups</button>
+-->
+  <form>
+    <label>Código: </label>
+    <!-- Primitiva NgModel: -->
+    <input [(ngModel)]="codigo_Producto_01" name="txtCodigo" />
+    <br />
+
+    <label>Nombre: </label>
+    <input [(ngModel)]="nombre_Producto_01" name="txtNombre" />
+
+    <br />
+    <label>Precio: </label>
+    <input [(ngModel)]="precio_Producto_01" name="txtPrecio" />
+    <br />
+    <!-- <button (click)="agregarProducto01()">GUARDAR</button> -->
+    <button (click)="agregarProducto02()">GUARDAR</button>
+  </form>
+  <!-- Es recomendable para las buenas prácticas siempre abrir como cerrar las etiquetas, no va a dar error. -->
+
+  <!--  <input [value]="variable_Codigo" />-->
+
+  {{codigo_Producto_01}}
+  <div></div>
+</div>
